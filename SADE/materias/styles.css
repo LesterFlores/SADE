@@ -1,0 +1,254 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Console';
+    overflow: hidden; 
+    padding: 0;
+    background-color: #f8f9fa;
+  }
+  
+  .container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden; 
+  }
+  
+  .ColorLetra {
+    color: #5bff61;
+  }
+  
+  .sidebar {
+    background-color: #343a40;
+    color: white;
+    width: 250px;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    border-radius: 5px;
+  }
+  
+  .sidebar h1 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin-bottom: 15px;
+  }
+  
+  .sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .sidebar ul li a:hover {
+    text-decoration: underline;
+    background-color: #555;
+  }
+  
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+    overflow: hidden; 
+    margin: 20px auto;
+    width: 79%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: -0px;
+    margin-left: 270px;
+  }
+  
+  fieldset {
+    border: 2px solid rgba(255, 255, 255, 0.7); /* Borde difuminado en blanco */
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 12px #5bff61; /* Sombra más prominente */
+    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+    position: relative; /* Necesario para el borde difuminado */
+    overflow: hidden; /* Evita barras de desplazamiento dentro del fieldset */
+  }
+  
+  /* Estilo del borde */
+  fieldset::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Borde adicional difuminado */
+    border-radius: 8px;
+    z-index: -1; /* Coloca el borde adicional detrás del contenido */
+  }
+  
+  .imagen {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+  }
+  
+  .complementArea {
+    height: 25px; /* Ajusta la altura según sea necesario */
+  }
+  
+  .area2 {
+    height: 548px; /* Ajusta la altura según sea necesario */
+    overflow-y: auto; /* Permite el desplazamiento vertical */
+    padding-right: 15px; /* Evita que el contenido se esconda detrás de la barra de desplazamiento */
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .fondos {
+    width: 800px;
+    height: 120px;
+  }
+  
+  .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .boton-salida {
+    background: none;
+    border: none;
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
+    cursor: pointer;
+    font-family: inherit;
+    position: absolute; /* Fijar posición absoluta */
+    right: 20px; /* Distancia de la orilla derecha */
+    top: 20px; /* Distancia de la parte superior */
+  }
+  
+  .area,
+  .area2 {
+    margin-bottom: 30px;
+  }
+  
+  .table-container {
+    max-width: 100%;
+    overflow-x: auto;
+    font-size: 13px;
+    line-height: 1.2;
+  }
+  
+  .table td, .table th {
+    padding: 5px;              /* Ajusta el espacio entre las celdas (padding) */
+  }
+  
+  .btn-agregar {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    float: right;
+    margin-bottom: 10px;
+  }
+  
+  .btn-agregar:hover {
+    background-color: #45a049;
+  }
+  
+  .btn-opcion {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .btn-opcion:hover {
+    color: #555;
+  }
+  
+  .tit {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .atimg1 {
+    margin-top: -32%;
+  }
+  
+  .txalig {
+    margin-top: -25%;
+    font-size: 25px;
+  }
+  
+  .btsalir {
+    margin-top: -120%;
+  }
+  
+  .text {
+    font-size: 25px;
+  }
+  
+  .ColorLetra {
+    font-size: 28px;
+    color: rgba(11, 255, 3, 0.884);
+  }
+  
+  .input-busqueda {
+    width: 30% !important; /* Ajusta el porcentaje según necesites */
+  }
+  
+  .slider {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Ajusta la altura según necesites */
+    overflow: hidden;
+    margin-top: 5%;
+    background-color: #e9ecef;
+  }
+  
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .btn-guardar {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .btn-guardar:hover {
+    background-color: #0056b3;
+  }
+  
+  .divider {
+    margin: 20px 0;
+    border-top: 1px solid #ddd;
+    border: solid rgb(153, 153, 153) 1px;
+  }

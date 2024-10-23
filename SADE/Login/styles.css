@@ -1,0 +1,104 @@
+/* General Styles */
+body {
+  font-family: 'Console'; background-color: #d6d6d6b9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 24px;
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  border: 4px solid rgba(42, 241, 48, 0.781); /* Borde difuminado verde */
+  box-shadow: 0 4px 8px rgba(0, 132, 240, 0.685); /* Sombra más sutil */
+  width: 100%;
+  max-width: 300px; 
+  text-align: center;
+  position: relative; /* Necesario para el borde difuminado */
+}
+
+/* Estilo del borde difuminado para el contenedor */
+.container::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border: 4px solid rgba(7, 7, 7, 0.5); /* Borde adicional difuminado verde */
+  border-radius: 12px;
+  z-index: -1; /* Coloca el borde adicional detrás del contenido */
+  box-shadow: 0 0 12px rgba(76, 175, 80, 0.5); /* Sombra difuminada verde */
+}
+
+h1 {
+  color: #000000;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 2px solid rgba(76, 175, 80, 0.7); /* Borde difuminado para los inputs */
+  font-size: 18px; /* Tamaño de fuente más grande que el resto */
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s; /* Añadido box-shadow a la transición */
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #00b5fd;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Sombra cuando el input está enfocado */
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: rgb(0, 0, 0);
+  border: 2px solid rgba(76, 175, 80, 0.7); /* Borde difuminado para el botón */
+  border-radius: 4px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s; /* Añadido box-shadow a la transición */
+}
+
+button:hover {
+  background-color: #45a049;
+  box-shadow: 4px 4px 8px rgba(0, 132, 240, 0.685); /* Sombra cuando el botón está en hover */
+}
+
+p {
+  margin-top: 15px;
+}
+
+a {
+  color: #4CAF50;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #45a049;
+}
