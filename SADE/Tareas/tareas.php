@@ -92,6 +92,15 @@ $resultado = $conn->query($sql);
         <div class="area2">
             <br>
             <h1 class="tit">Tareas</h1>
+            <?php if (isset($_GET['mensaje'])): ?>
+            <?php if ($_GET['mensaje'] == 'exito'): ?>
+                <div class="alert alert-success">Registro guardado correctamente.</div>
+            <?php elseif ($_GET['mensaje'] == 'error'): ?>
+                <div class="alert alert-danger">
+                    <?php echo urldecode($_GET['detalle']); ?>
+                </div>
+            <?php endif; ?>
+        <?php endif; ?>
             <div class="contenedor">
                 <input class="form-control input-busqueda" type="text" placeholder="Buscar">
                 <button class="btn-agregar" onclick="window.location.href='crear_tarea.php';">Agregar</button>

@@ -2,23 +2,6 @@
 include('../db_connect.php');
 include '../acciones/mostrar_nombre_usuario.php';
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $nombre_tarea = $_POST['nombre_tarea'];
-    $descripcion = $_POST['descripcion'];
-    $codigo_ciclo = $_POST['codigo_ciclo'];
-    $codigo_materia = $_POST['codigo_materia'];
-
-    $query = "
-        INSERT INTO tbl_tareas (nombre_tarea, descripcion, codigo_ciclo, codigo_materia)
-        VALUES ('$nombre_tarea', '$descripcion', '$codigo_ciclo', '$codigo_materia')
-    ";
-    
-    if (mysqli_query($conn, $query)) {
-        echo "Tarea creada con éxito.";
-    } else {
-        echo "Error al crear la tarea: " . mysqli_error($conn);
-    }
-}
 
 // Obtener ciclos y materias para los selects
 $ciclos = mysqli_query($conn, "SELECT 
@@ -94,6 +77,7 @@ $materias = mysqli_query($conn, "SELECT codigo_materia, nombre_materia FROM tbl_
             <!-- Formulario para alumnos -->
             <div class="form-section">
                 <h2 class="textColor">Crear Tareas</h2>
+                
                 <form id="formulario-datos" action="ac_agregar_tarea.php" method="POST">
                     
                         <div class="form-group col-md-6">
